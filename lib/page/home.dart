@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/theme/theme_provider.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:provider/provider.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -12,11 +10,6 @@ class HomePage extends StatelessWidget {
       backgroundColor: Theme.of(context).colorScheme.background,
       body: const Center(
         child: Text('switch mode'),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Provider.of<ThemeProvider>(context, listen: false).toggleTheme();
-        },
       ),
       bottomNavigationBar: Container(
         margin: EdgeInsets.symmetric(horizontal: 16, vertical: 20),
@@ -29,7 +22,7 @@ class HomePage extends StatelessWidget {
               backgroundColor: Colors.white,
               color: Colors.black,
               activeColor: Colors.white,
-              tabBackgroundColor: Colors.purple.shade900,
+              tabBackgroundColor: Color(0xff3559E0),
               tabs: [
                 GButton(
                   icon: Icons.home,
