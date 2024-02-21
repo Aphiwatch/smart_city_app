@@ -37,6 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   google_nav_bar: ^5.0.6
   provider:
+  flutter_svg: ^2.0.9
 
 dev_dependencies:
   flutter_test:
@@ -63,6 +64,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/fonts/
+    - assets/images/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
@@ -78,19 +80,6 @@ flutter:
   fonts:
     - family: Kanit
       fonts:
-        - asset: assets/fonts/Kanit-Regular.ttf
-          weight: 300
-        - asset: assets/fonts/Kanit-Regular.ttf
-          weight: 400
-        - assets: assets/fonts/Kanit-Italic.ttf
-          style: italic
-        - assets: assets/fonts/Kanit-Medium.ttf
-          weight: 500
-        - assets: assets/fonts/Kanit-MediumItalic.ttf
-          weight: 500
-          style: italic
-        - assets: assets/fonts/Kanit-SemiBold.ttf
-          weight: 600
-        - assets: assets/fonts/Kanit-Bold.ttf
-          weight: 800
+        - asset: assets/fonts/Kanit-ExtraBold.ttf
+        
 

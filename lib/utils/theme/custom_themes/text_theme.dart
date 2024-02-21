@@ -6,12 +6,12 @@ class SMCTextTheme{
   ///Customize Light Text Theme
   static TextTheme lightTextTheme = TextTheme(
     headlineLarge: const TextStyle().copyWith(
-      fontSize: 32,
+      fontSize: 40,
       fontWeight: FontWeight.bold,
       color: Colors.black
     ),
     headlineMedium: const TextStyle().copyWith(
-      fontSize: 24,
+      fontSize: 28,
       fontWeight: FontWeight.w600,
       color: Colors.black,
     ),

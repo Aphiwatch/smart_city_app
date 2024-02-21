@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:flutter_application_1/utils/theme/custom_themes/text_theme.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -7,43 +8,36 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.background,
-      body: const Center(
-        child: Text('switch mode'),
-      ),
-      bottomNavigationBar: Container(
-        margin: EdgeInsets.symmetric(horizontal: 16, vertical: 20),
-        decoration: BoxDecoration(
-            color: Colors.white, borderRadius: BorderRadius.circular(30)),
-        child: SafeArea(
-          child: Padding(
-            padding: EdgeInsets.all(10),
-            child: GNav(
-              backgroundColor: Colors.white,
-              color: Colors.black,
-              activeColor: Colors.white,
-              tabBackgroundColor: Color(0xff3559E0),
-              tabs: [
-                GButton(
-                  icon: Icons.home,
-                  text: 'Home',
-                ),
-                GButton(
-                  icon: Icons.map,
-                  text: 'Maps',
-                ),
-                GButton(
-                  icon: Icons.history,
-                  text: 'History',
-                ),
-                GButton(
-                  icon: Icons.settings,
-                  text: 'Setting',
-                )
-              ],
-            ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            'SMART CITY',
+            style: SMCTextTheme.lightTextTheme.headlineLarge,
           ),
-        ),
+          Container(
+            height: 290,
+            width: 290,
+            child: SvgPicture.asset('assets/images/undraw_location_search_re_ttoj.svg')),
+          Column(
+            children: [
+              Center(
+                child: Text(
+                  'คุณอยู่ที่ไหนตอนนี้',
+                  style: SMCTextTheme.lightTextTheme.headlineLarge,
+                ),
+              ),
+            ],
+          ),
+          SizedBox(height: 20,),
+          Container(
+            decoration: BoxDecoration(color: Color(0xFFF4F3F2), borderRadius: BorderRadius.circular(10)),
+            child: Column(
+              children: [
+                TextButton(onPressed: (){}, child: Text("ยืนยัน",style: SMCTextTheme.lightTextTheme.headlineMedium ,))
+              ]),
+          ),
+        ],
       ),
     );
   }

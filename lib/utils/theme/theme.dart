@@ -11,14 +11,14 @@ class SMCAppTheme {
     primaryColor: Colors.blue,
     scaffoldBackgroundColor: Colors.white,
     textTheme: SMCTextTheme.lightTextTheme,
-    elevatedButtonTheme: ElevatedButtonThemeData(),
+    // elevatedButtonTheme: ElevatedButtonThemeData(),
   );
   static ThemeData darkTheme = ThemeData(
     useMaterial3: true,
     fontFamily: 'Kanit',
     brightness: Brightness.dark,
     primaryColor: Colors.blue,
-    scaffoldBackgroundColor: Colors.black,
+    scaffoldBackgroundColor: Color(0xFF070F2B),
     textTheme: SMCTextTheme.darkTextTheme,
   );
 }
