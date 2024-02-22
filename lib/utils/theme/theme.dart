@@ -18,7 +18,7 @@ class SMCAppTheme {
     fontFamily: 'Kanit',
     brightness: Brightness.dark,
     primaryColor: Colors.blue,
-    scaffoldBackgroundColor: Color(0xFF070F2B),
+    scaffoldBackgroundColor: const Color(0xFF070F2B),
     textTheme: SMCTextTheme.darkTextTheme,
   );
 }
