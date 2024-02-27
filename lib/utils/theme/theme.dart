@@ -9,7 +9,7 @@ class SMCAppTheme {
     fontFamily: 'Kanit',
     brightness: Brightness.light,
     primaryColor: Colors.blue,
-    scaffoldBackgroundColor: Colors.white,
+    scaffoldBackgroundColor: const Color(0xffECECEC),
     textTheme: SMCTextTheme.lightTextTheme,
     // elevatedButtonTheme: ElevatedButtonThemeData(),
   );

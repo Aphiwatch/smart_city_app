@@ -20,6 +20,7 @@ class _WelcomePageState extends State<WelcomePage> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
+      backgroundColor: const Color(0xff3559E0),
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -70,19 +71,20 @@ class _WelcomePageState extends State<WelcomePage> {
                           _selectedVal = val as String;
                         });
                       },
-                      // dropdownColor: Colors.amber,
+                      iconEnabledColor: Colors.black,
                       decoration: const InputDecoration(
                           labelText: "จังหวัด",
-                          labelStyle: TextStyle(color: Colors.grey),
+                          labelStyle: TextStyle(color: Colors.black),
                           prefixIcon: Icon(
                             Icons.location_on,
                             color: Colors.black,
                           ),
-                          border: UnderlineInputBorder()),
+                          border: UnderlineInputBorder(),
+                          ),
                     ),
                   ),
                   const SizedBox(
-                    height: 10,
+                    height: 20,
                   ),
                   Container(
                     decoration: BoxDecoration(
