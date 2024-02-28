@@ -163,23 +163,21 @@ class _HomePageState extends State<HomePage> {
           // padding: EdgeInsets.all(20),
           activeColor: Color(0xFF3559E0),
           backgroundColor: Colors.white,
+          hoverColor: Color(0xFF3559E0),
           iconSize: 30,
+          gap: 5,
           tabs: [
             GButton(
               icon: Icons.home,
-              text: "Home",
             ),
             GButton(
               icon: Icons.location_on,
-              text: "Location",
             ),
             GButton(
               icon: Icons.history,
-              text: "History",
             ),
             GButton(
               icon: Icons.settings,
-              text: "Setting",
             ),
             // GButton(icon: Icons.menu),
           ]),
