@@ -88,4 +88,4 @@ class _SlideShowWidgetState extends State<SlideShowWidget> {
   void animateToSlide(int index) => controller.animateToPage(index);
 }
 Widget buildImage(String imagePath, int index) =>
-    Image.network(imagePath, fit: BoxFit.cover);
+    Image.asset(imagePath, fit: BoxFit.cover);
