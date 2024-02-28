@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/utils/theme/custom_themes/image_slideshow.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+
 // import 'package:flutter_application_1/utils/theme/custom_themes/text_theme.dart';
 // import 'package:flutter_svg/flutter_svg.dart';
 class HomePage extends StatefulWidget {
@@ -61,7 +62,7 @@ class _HomePageState extends State<HomePage> {
                     )
                   ]),
               margin: const EdgeInsets.all(10),
-              height: 500,
+              height: 450,
               width: 380,
               child: Column(
                 children: [
@@ -154,7 +155,7 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
-            SlideShowWidget()
+            const SlideShowWidget()
           ],
         ),
       ),
@@ -166,15 +167,19 @@ class _HomePageState extends State<HomePage> {
           tabs: [
             GButton(
               icon: Icons.home,
+              text: "Home",
             ),
             GButton(
               icon: Icons.location_on,
+              text: "Location",
             ),
             GButton(
               icon: Icons.history,
+              text: "History",
             ),
             GButton(
               icon: Icons.settings,
+              text: "Setting",
             ),
             // GButton(icon: Icons.menu),
           ]),
