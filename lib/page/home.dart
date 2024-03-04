@@ -3,7 +3,7 @@ import 'package:flutter_application_1/page/allcity.dart';
 import 'package:flutter_application_1/utils/theme/custom_themes/image_slideshow.dart';
 // import 'package:flutter_svg/svg.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+
 // import 'package:flutter_application_1/utils/theme/custom_themes/text_theme.dart';
 // import 'package:flutter_svg/flutter_svg.dart';
 class HomePage extends StatefulWidget {
@@ -53,23 +53,22 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             Container(
-              decoration: BoxDecoration(
-                  color: const Color(0xFFFFFFFF),
-                  borderRadius: BorderRadius.circular(20),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.withOpacity(0.5),
-                      blurRadius: 5,
-                      offset: const Offset(0, 8),
-                    )
-                  ]),
+              // decoration: BoxDecoration(
+              //     color: const Color(0xFFFFFFFF),
+              //     borderRadius: BorderRadius.circular(20),
+              //     boxShadow: [
+              //       BoxShadow(
+              //         color: Colors.grey.withOpacity(0.5),
+              //         blurRadius: 5,
+              //         offset: const Offset(0, 8),
+              //       )
+              //     ]),
               margin: const EdgeInsets.all(10),
               height: 450,
               width: 380,
-              child:  Column(
+              child: Column(
                 children: [
-                  const AllCity(),
-                  SmoothPageIndicator(controller: controller, count: 5)
+                  AllCity(),
                 ],
               ),
             ),
