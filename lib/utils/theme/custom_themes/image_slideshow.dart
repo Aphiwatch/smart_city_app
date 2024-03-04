@@ -59,7 +59,7 @@ class _SlideShowWidgetState extends State<SlideShowWidget> {
                   autoPlayCurve: Curves.fastOutSlowIn,
                   autoPlayInterval: const Duration(seconds: 3),
                   autoPlayAnimationDuration: const Duration(milliseconds: 800),
-                  viewportFraction: 0.8,
+                  // viewportFraction: 0.8,
                   onPageChanged: (index, reason) =>
                       setState(() => activeIndex = index),
                 ),
@@ -80,9 +80,11 @@ class _SlideShowWidgetState extends State<SlideShowWidget> {
             onDotClicked: animateToSlide,
             count: _imagePaths.length,
             effect: const ScaleEffect(
-              dotWidth: 10,
-              dotHeight: 10, 
-              activeDotColor: Color(0xff3559E0)),
+              dotWidth: 6,
+              dotHeight: 6, 
+              activeDotColor: Color(0xff3559E0),
+              dotColor: Colors.black, 
+              ),
             activeIndex: activeIndex,
           );
   void animateToSlide(int index) => controller.animateToPage(index);

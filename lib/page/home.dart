@@ -53,24 +53,20 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             Container(
-              // decoration: BoxDecoration(
-              //     color: const Color(0xFFFFFFFF),
-              //     borderRadius: BorderRadius.circular(20),
-              //     boxShadow: [
-              //       BoxShadow(
-              //         color: Colors.grey.withOpacity(0.5),
-              //         blurRadius: 5,
-              //         offset: const Offset(0, 8),
-              //       )
-              //     ]),
+              decoration: BoxDecoration(
+                  color: const Color(0xFFFFFFFF),
+                  borderRadius: BorderRadius.circular(20),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.5),
+                      blurRadius: 5,
+                      offset: const Offset(0, 8),
+                    )
+                  ]),
               margin: const EdgeInsets.all(10),
               height: 450,
               width: 380,
-              child: Column(
-                children: [
-                  AllCity(),
-                ],
-              ),
+              child: const AllCity(),
             ),
             // const AllCity(),
             const SlideShowWidget(),
@@ -91,7 +87,7 @@ class _HomePageState extends State<HomePage> {
             ),
             GButton(
               icon: Icons.location_on,
-              text: "Locations",
+              text: "Maps",
             ),
             GButton(
               icon: Icons.history,
