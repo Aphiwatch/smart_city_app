@@ -28,6 +28,7 @@ class _AllCityState extends State<AllCity> {
             width: 360,
             child: PageView(
               controller: _controller,
+              
               children: [
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,

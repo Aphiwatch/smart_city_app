@@ -6,6 +6,7 @@ class SMCTextTheme{
   ///Customize Light Text Theme
   static TextTheme lightTextTheme = TextTheme(
     headlineLarge: const TextStyle().copyWith(
+      fontFamily: 'Kanit',
       fontSize: 40,
       fontWeight: FontWeight.bold,
       color: Colors.black

@@ -88,6 +88,6 @@ flutter:
   fonts:
     - family: Kanit
       fonts:
-        - asset: assets/fonts/Kanit-ExtraBold.ttf
+        - asset: assets/fonts/Kanit-Regular.ttf
         
 
