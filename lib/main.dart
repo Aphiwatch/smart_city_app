@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/page/home.dart';
+import 'package:flutter_application_1/page/mainmenu.dart';
 // import 'package:flutter_application_1/page/welcome.dart';
 import 'package:flutter_application_1/utils/theme/theme.dart';
 
@@ -16,7 +16,7 @@ class App extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.system,
       // home:  const WelcomePage(),
-      home: const HomePage(),
+      home: const MainMenu(),
       theme: SMCAppTheme.lightTheme,
       darkTheme: SMCAppTheme.darkTheme,
     );
