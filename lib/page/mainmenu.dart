@@ -43,8 +43,8 @@ class _MainMenuState extends State<MainMenu> {
             text: "Maps",
           ),
           GButton(
-            icon: Icons.history,
-            text: "History",
+            icon: Icons.bar_chart,
+            text: "Static",
           ),
           GButton(
             icon: Icons.settings,
