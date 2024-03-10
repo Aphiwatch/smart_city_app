@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/page/history.dart';
+import 'package:flutter_application_1/page/static.dart';
 import 'package:flutter_application_1/page/home.dart';
 import 'package:flutter_application_1/page/maps.dart';
 import 'package:flutter_application_1/page/setting.dart';
@@ -18,7 +18,7 @@ class _MainMenuState extends State<MainMenu> {
   static const List<Widget> _widgetOptions = <Widget>[
     HomeScreen(),
     MapsScreen(),
-    HistoryScreen(),
+    StaticScreen(),
     SettingScreen(),
   ];
 

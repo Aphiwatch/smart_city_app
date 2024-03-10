@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/utils/theme/custom_themes/text_theme.dart';
 
 class SettingScreen extends StatefulWidget {
   const SettingScreen({super.key});
@@ -29,38 +28,37 @@ class _SettingScreenState extends State<SettingScreen> {
         width: 380,
         child: Container(
           margin: const EdgeInsets.all(20),
-          child: Column(
+          child: const Column(
             children: [
               Row(
                 children: [
                   Text(
                     "การตั้งค่า",
-                    style: SMCTextTheme.lightTextTheme.headlineLarge,
+                    style: TextStyle(fontSize: 30),
                   ),
                 ],
               ),
-              const SizedBox(
+              SizedBox(
                 height: 30,
               ),
               Column(
                 children: [
                   Row(
                     children: [
-                      Text(
-                        "ภาษา",
-                      style: SMCTextTheme.lightTextTheme.headlineSmall),
+                      Text("ภาษา",
+                          style: TextStyle(color: Colors.grey, fontSize: 24)),
                     ],
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text("ภาษาไทย",style: SMCTextTheme.lightTextTheme.headlineSmall),
-                      const Text("dropdown"),
+                      Text("ภาษาไทย", style: TextStyle(fontSize: 24)),
+                      Text("dropdown", style: TextStyle(fontSize: 24)),
                     ],
                   ),
                 ],
               ),
-              const SizedBox(
+              SizedBox(
                 height: 30,
               ),
               Column(
@@ -68,33 +66,35 @@ class _SettingScreenState extends State<SettingScreen> {
                   Row(
                     children: [
                       Text("ธีม",
-                      style: SMCTextTheme.lightTextTheme.headlineSmall),
+                          style: TextStyle(color: Colors.grey, fontSize: 24)),
                     ],
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text("โหมดมืด",style: SMCTextTheme.lightTextTheme.headlineSmall),
-                      const Text("SwitchMode"),
+                      Text("โหมดมืด", style: TextStyle(fontSize: 24)),
+                      Text("SwitchMode", style: TextStyle(fontSize: 24)),
                     ],
                   ),
                 ],
               ),
-              const SizedBox(
+              SizedBox(
                 height: 30,
               ),
               Column(
                 children: [
                   Row(
                     children: [
-                      Text("หน่วย", style: SMCTextTheme.lightTextTheme.headlineSmall),
+                      Text("หน่วย", style: TextStyle(color: Colors.grey, fontSize: 24)),
                     ],
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text("หน่วยอุณหภูมิ", style: SMCTextTheme.lightTextTheme.headlineSmall),
-                      const Text("dropdown"),
+                      Text("หน่วยอุณหภูมิ",
+                      style: TextStyle(fontSize: 24)),
+                      Text("dropdown",
+                      style: TextStyle(fontSize: 24)),
                     ],
                   ),
                 ],
