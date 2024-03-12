@@ -108,7 +108,7 @@ class _AllCityState extends State<AllCity> {
                           child: Column(
                             children: [
                               Icon(
-                                Icons.headset,
+                                Icons.masks,
                                 color: Color(0xFF3559E0),
                               ),
                               Text(
@@ -200,7 +200,7 @@ class _AllCityState extends State<AllCity> {
                           child: Column(
                             children: [
                               Icon(
-                                Icons.headset,
+                                Icons.masks,
                                 color: Color(0xFF3559E0),
                               ),
                               Text(
@@ -292,7 +292,7 @@ class _AllCityState extends State<AllCity> {
                           child: Column(
                             children: [
                               Icon(
-                                Icons.headset,
+                                Icons.masks,
                                 color: Color(0xFF3559E0),
                               ),
                               Text(
@@ -384,7 +384,7 @@ class _AllCityState extends State<AllCity> {
                           child: Column(
                             children: [
                               Icon(
-                                Icons.headset,
+                                Icons.masks,
                                 color: Color(0xFF3559E0),
                               ),
                               Text(
@@ -476,7 +476,7 @@ class _AllCityState extends State<AllCity> {
                           child: Column(
                             children: [
                               Icon(
-                                Icons.headset,
+                                Icons.masks,
                                 color: Color(0xFF3559E0),
                               ),
                               Text(
