@@ -30,7 +30,7 @@ class _StaticScreenState extends State<StaticScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
+      body: Center(
         child: Padding(
           padding: const EdgeInsets.all(10),
           child: Column(
@@ -177,7 +177,6 @@ class _StaticScreenState extends State<StaticScreen>
                   ],
                 ),
               ),
-              const SizedBox(height: 10,),
               SizedBox(
                 height: MediaQuery.of(context).size.height,
                 width: MediaQuery.of(context).size.height,
@@ -211,15 +210,18 @@ class _StaticScreenState extends State<StaticScreen>
                       ),
                       
                     ),
-                    Expanded(
-                  child: TabBarView(
-                    controller: tabController,
-                    children:  const [
-                  SummaryTemp(),
-                  SummaryHumid(),
-                  SummaryPM25(),
-                ],)
-                )
+                    SizedBox(
+                      height: 800,
+                      child: Expanded(
+                        child: TabBarView(
+                          controller: tabController,
+                          children:  const [
+                        SummaryTemp(),
+                        SummaryHumid(),
+                        SummaryPM25(),
+                                      ],),
+                      ),
+                    )
                   ],
                 ),
               ),

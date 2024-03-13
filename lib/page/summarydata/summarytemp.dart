@@ -37,7 +37,6 @@ class _SummaryTempState extends State<SummaryTemp> {
                       )
                     ]),
                 margin: const EdgeInsets.symmetric(vertical: 10),
-                // height: 400,
                 width: 380,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -65,7 +64,7 @@ class _SummaryTempState extends State<SummaryTemp> {
                               dataSource: data,
                               xValueMapper: (_AVGData hours, _) => hours.hour,
                               yValueMapper: (_AVGData temps, _) => temps.temp,
-          
+                            
                               // Enable data label
                               dataLabelSettings:
                                   const DataLabelSettings(isVisible: true))
