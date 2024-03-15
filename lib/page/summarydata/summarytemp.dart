@@ -60,14 +60,16 @@ class _SummaryTempState extends State<SummaryTemp> {
                         // Enable tooltip
                         tooltipBehavior: TooltipBehavior(enable: true),
                         series: <CartesianSeries<_AVGData, String>>[
-                          LineSeries<_AVGData, String>(
+                          ColumnSeries<_AVGData, String>(
                               dataSource: data,
                               xValueMapper: (_AVGData hours, _) => hours.hour,
                               yValueMapper: (_AVGData temps, _) => temps.temp,
                             
                               // Enable data label
                               dataLabelSettings:
-                                  const DataLabelSettings(isVisible: true))
+                                  const DataLabelSettings(isVisible: true),
+                              color: const Color(0xff3559E0)
+                              ),
                         ]),
                   ],
                 ),
@@ -106,7 +108,7 @@ class _SummaryTempState extends State<SummaryTemp> {
                         title: const ChartTitle(text: 'Monthly Static'),
                         tooltipBehavior: TooltipBehavior(enable: true),
                         series: <CartesianSeries<_AVGData, String>>[
-                          ColumnSeries<_AVGData, String>(
+                          LineSeries<_AVGData, String>(
                             dataSource: data,
                             xValueMapper: (_AVGData hours, _) => hours.hour,
                             yValueMapper: (_AVGData temps, _) => temps.temp,

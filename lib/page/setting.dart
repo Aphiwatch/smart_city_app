@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SettingScreen extends StatefulWidget {
@@ -8,6 +9,12 @@ class SettingScreen extends StatefulWidget {
 }
 
 class _SettingScreenState extends State<SettingScreen> {
+  String dropdownLangValue = 'ไทย';
+  String dropdownTempValue = '°C';
+
+
+
+  bool _lights = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,9 +35,9 @@ class _SettingScreenState extends State<SettingScreen> {
         width: 380,
         child: Container(
           margin: const EdgeInsets.all(20),
-          child: const Column(
+          child:  Column(
             children: [
-              Row(
+              const Row(
                 children: [
                   Text(
                     "การตั้งค่า",
@@ -38,12 +45,12 @@ class _SettingScreenState extends State<SettingScreen> {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               Column(
                 children: [
-                  Row(
+                  const Row(
                     children: [
                       Text("ภาษา",
                           style: TextStyle(color: Colors.grey, fontSize: 24)),
@@ -52,18 +59,40 @@ class _SettingScreenState extends State<SettingScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text("ภาษาไทย", style: TextStyle(fontSize: 24)),
-                      Text("dropdown", style: TextStyle(fontSize: 24)),
+                      const Text("ภาษาไทย", style: TextStyle(fontSize: 24)),
+                      DropdownButton<String>(
+                        value: dropdownLangValue,
+                        icon: const Icon(Icons.arrow_drop_down),
+                        underline: Container(
+                          height: 1,
+                          color: Colors.white,
+                        ),
+                        onChanged: (String? newValue){
+                          setState(() {
+                            dropdownLangValue = newValue!;
+                          });
+                        },
+                        items: const [
+                          DropdownMenuItem<String>(
+                            value: 'ไทย',
+                            child: Text('ภาษาไทย'),
+                          ),
+                          DropdownMenuItem<String>(
+                            value: 'English',
+                            child: Text('English'),
+                          ),
+                        ],
+                      ),
                     ],
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               Column(
                 children: [
-                  Row(
+                  const Row(
                     children: [
                       Text("ธีม",
                           style: TextStyle(color: Colors.grey, fontSize: 24)),
@@ -72,18 +101,22 @@ class _SettingScreenState extends State<SettingScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text("โหมดมืด", style: TextStyle(fontSize: 24)),
-                      Text("SwitchMode", style: TextStyle(fontSize: 24)),
+                      const Text("โหมดมืด", style: TextStyle(fontSize: 24)),
+                      CupertinoSwitch(value: _lights, onChanged: (bool value){
+                        setState(() {
+                          _lights = value;
+                        });
+                      }),
                     ],
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               Column(
                 children: [
-                  Row(
+                  const Row(
                     children: [
                       Text("หน่วย", style: TextStyle(color: Colors.grey, fontSize: 24)),
                     ],
@@ -91,10 +124,31 @@ class _SettingScreenState extends State<SettingScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text("หน่วยอุณหภูมิ",
+                      const Text("หน่วยอุณหภูมิ",
                       style: TextStyle(fontSize: 24)),
-                      Text("dropdown",
-                      style: TextStyle(fontSize: 24)),
+                      DropdownButton<String>(
+                        value: dropdownTempValue,
+                        icon: const Icon(Icons.arrow_drop_down),
+                        underline: Container(
+                          height: 1,
+                          color: Colors.white,
+                        ),
+                        onChanged: (String? newTempValue){
+                          setState(() {
+                            dropdownTempValue = newTempValue!;
+                          });
+                        },
+                        items: const [
+                          DropdownMenuItem<String>(
+                            value: '°C',
+                            child: Text('°C'),
+                          ),
+                          DropdownMenuItem<String>(
+                            value: '°F',
+                            child: Text('°F'),
+                          ),
+                        ],
+                      ),
                     ],
                   ),
                 ],
